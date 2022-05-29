@@ -23,8 +23,11 @@ export const AddTransaction = () => {
             text: text,
             amount: +amount
         };
-
-        addTransaction(newTransaction);
+          if (text && amount) {
+            addTransaction(newTransaction);
+        } else {
+            alert("Please fill in both input fields")
+        }
     };
 
     return (
